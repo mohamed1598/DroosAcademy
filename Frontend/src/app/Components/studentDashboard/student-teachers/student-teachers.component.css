@@ -1,0 +1,34 @@
+*{
+    direction: rtl;
+    text-align: center;
+    font-size: 1.3rem;
+}
+.back{
+    width: 4rem;
+    height: 2.5rem;
+    background-color: #A5B1C2;
+    border-radius: 2rem 0 0 2rem;
+    margin: 1.5rem;
+    text-align: right;
+    padding-top: 0.4rem;
+}
+.go{
+    width: 4rem;
+    height: 2.5rem;
+    background-color: #3498DB;
+    border-radius: 0 2rem 2rem 0;
+    margin: 1.5rem;
+    text-align: left;
+    padding-top: 0.4rem;
+}
+.noLectures{
+    position: relative;
+}
+h2{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    text-align: center;
+    font-size: 2rem;
+    margin: 2rem;
+}

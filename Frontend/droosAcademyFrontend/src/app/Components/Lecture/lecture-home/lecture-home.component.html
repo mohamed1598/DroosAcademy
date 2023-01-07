@@ -1,0 +1,121 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><app-logo></app-logo></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100">
+
+            <div class="d-flex w-100 justify-content-center">
+              <div class="toBlock">
+                <li class="nav-item ">
+                  <a class="nav-link" href="#"><button class="btn btn1 ml-3">محاضراتى</button></a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="#"> <button class="btn btn1">حسابى</button></a>
+                </li>
+              </div>
+
+
+              <div class=" position-absolute twoBills ml-5 toBlock" *ngIf="isStudent">
+                <li class="nav-item col-xs-12">
+                  <a class="nav-link" href="#"><button class="btn btn2 rounded-pill " *ngIf="isStudent">{{student.balance}}</button></a>
+                </li>
+                <li class="nav-item col-xs-12">
+                  <a class="nav-link" href="#"><button class="btn btn3 rounded-pill" *ngIf="isStudent">{{student.bonus}}</button></a>
+                </li>
+              </div>
+            </div>
+
+
+
+
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="description py-5 overflow-hidden position-relative">
+    <div class="container px-5  ">
+      <div class="row ">
+        <div class="col-md-9">
+          <div class="row justify-content-between pt-5">
+            <div class="col-lg-7 d-flex  right-right">
+              <p class="titlechange">{{lecture.name}}</p>
+            </div>
+
+            <div class="d-flex col-lg-5  right-left" *ngIf="isStudent">
+              <a class="nav-link" href="#"><button class="btn btn2 rounded-pill ">{{student.balance}}</button></a>
+              <a class="nav-link" href="#"><button class="btn btn3 rounded-pill">{{student.bonus}}</button></a>
+            </div>
+          </div>
+          <div class="">
+            <p class="text-break changeDirection" >{{lecture.details}}</p>
+          </div>
+          
+        </div>
+
+        
+
+        <div class="col-md-3 left-left">
+          <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+              <img src="assets/testimonial-2.jpg" alt="" class="rounded-circle mt-2">
+            </div>
+            <div class="col-2"></div>
+          </div>
+          <h5 class="pt-2" *ngIf="lecture.teacher!=null">الاستاذ/{{lecture.teacher.fullname}}</h5>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="text-center pt-5 container">
+    <div class="text-center">
+      <h3>دروس المحاضرة</h3>
+    </div>
+
+    <div class="row py-5 ">
+      <div class="d-flex flex-column col-12 col-md-3  align-items-center mb-3">
+        <button class="btn midButtons" *ngFor="let part of lecture.lectureParts" (click)="showVideo(part.id)">{{part.name}}</button>
+      </div>
+
+      <div class="col-md-9" [innerHTML]="inputpdf"></div>
+      <!-- <div class="col-9">
+        <iframe src="https://player.vimeo.com/video/445394992" style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="500px" width="95%" allowfullscreen></iframe><div style="position: absolute;width: 91%;bottom: 4px;left: 0;right: 0;margin-left: auto;margin-right: auto;color: #000;text-align: center;"><small style="line-height: 1.2;font-size: 0px;background: #fff;"> <a href="https://vimembed.com/">Vimeo embed code</a> </small></div><style>.boxes2{height:212px;width:316px;} #new img{max-width:none!important;background:none!important}</style></div>
+      </div> -->
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="wrapp">
+        <div class=" likeHeader  d-flex align-items-center justify-content-center" >
+          <a href="#" class="bg-dark h-100 d-flex align-items-center justify-content-center px-5 text-white text-decoration-none"> ملفات المحاضرة</a>
+        </div>
+        <div class="my-5 py-3 d-flex justify-content-around row">
+          <a class="btn balgha text-white .col-8 .col-md-6 .col-lg-3" *ngFor="let folder of lecture.lectureFolders" [href]="folder.link"><i class="fa fa-download col-12"></i>{{folder.name}}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <div class="wrapp2">
+        <div class=" likeHeader2  d-flex align-items-center justify-content-center" >
+          <a href="#" class=" balgha h-100 d-flex align-items-center justify-content-center px-5 text-white text-decoration-none"> اختبارات المحاضرة</a>
+        </div>
+        <div class="my-5 py-3 d-flex justify-content-around row">
+          <a class="btn bg-dark text-white .col-8 .col-md-6 .col-lg-3" *ngFor="let exam of lecture.exams" (click)="goToExam(exam.id)" ><i class="fa fa-question-circle" style="display: block;"></i>{{exam.name}}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  

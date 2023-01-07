@@ -1,0 +1,23 @@
+<div class="container"  *ngIf="teachers.length != 0" [ngStyle]="{'min-height.px': height}">
+    <div class="row">
+        <app-teacher-card class="col-lg-4 col-md-6" *ngFor="let teacher of teachers" [teacher]="teacher"></app-teacher-card>
+    </div>
+    <!-- <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4 row">
+            <div  class="col-4 back">
+                السابق
+            </div>
+            <div class="col-4 go">
+                التالى
+            </div>
+        </div>
+        <div class="col-4"></div>
+    </div> -->
+    <div style="height: 4rem;"></div>
+</div>
+<div class="container">
+    <div class="noLectures" *ngIf="teachers.length == 0" [ngStyle]="{'min-height.px': height}">
+        <h2 [ngStyle]="{'margin-top.px': height/2.5}">مرحبا بك ،انت لا تملك اى مدرسين حتى الآن </h2>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+<div class="container">
+    <div class="row" *ngIf="lectures.length != 0" [ngStyle]="{'min-height.px': height}">
+        <app-lecture-card class="col-lg-4 col-md-6" *ngFor="let lecture of lectures" [lecture]="lecture"></app-lecture-card>
+    </div>    
+    <div class="noLectures" *ngIf="lectures.length == 0" [ngStyle]="{'min-height.px': height}">
+        <h2 [ngStyle]="{'margin-top.px': height/2.5}">مرحبا بك ،انت لا تملك اى محاضرات حتى الآن </h2>
+    </div>
+</div>

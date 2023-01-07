@@ -1,0 +1,30 @@
+/* nav{
+    margin: 0;
+    padding: 0!important;
+}
+.navbar-brand{
+    width: 100%;
+}
+.span{
+    margin-top: 5%;
+}
+.nav-item{
+    text-align: right;
+}
+app-logo{
+    width: 100%;
+} */
+
+.ul{
+    direction: ltr;
+}
+li{
+    margin-left: 20px;
+    font-size: 18px;
+}
+li a{
+    color: #F18C8E!important;
+}
+.navbar{
+    padding-top: 0;
+}

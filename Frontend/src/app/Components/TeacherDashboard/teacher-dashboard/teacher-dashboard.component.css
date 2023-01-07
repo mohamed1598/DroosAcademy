@@ -1,0 +1,46 @@
+*{
+    direction: rtl;
+}
+/* app-teacher-navbar{
+    margin: 0;
+    width: 100%;
+} */
+.left{
+    background-color: #F1F2F6;
+    padding: 0.5rem;
+    /* height: 55rem; */
+}
+.btn{
+    display: block;
+    margin-top: 1.5rem;
+    margin-right: 2%;
+    width: 95%;
+    background: inherit;
+    border-radius: 0.5rem;
+    color: black;
+    border-color: inherit;
+}
+.btn:hover,.active{
+    background: rgb(230,101,79);
+    background: linear-gradient(137deg, rgba(230,101,79,1) 20%, rgba(249,122,19,1) 48%, rgba(255,128,0,1) 76%);
+    color: white;
+    border-color: inherit;
+}
+.addLecture{
+    background: rgb(230,101,79);
+    background: linear-gradient(137deg, rgba(230,101,79,1) 20%, rgba(249,122,19,1) 48%, rgba(255,128,0,1) 76%);
+    color: white;
+    border-color: inherit;
+    width: 75%;
+    margin-right: 12%;
+    margin-bottom: 3rem;
+}
+.dash{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+} 
+.right{
+    padding: 0;
+    margin: 0;
+}

@@ -1,0 +1,81 @@
+<div *ngIf="loginService.type == 'student'">
+    <app-student-navbar></app-student-navbar>
+</div>
+<div *ngIf="loginService.type == 'teacher'">
+    <app-teacher-navbar></app-teacher-navbar>
+</div>
+<div *ngIf="loginService.type == 'admin'">
+    <app-admin-navbar></app-admin-navbar>
+</div>
+<hr>
+<div class="container" *ngIf="exam && lecture">
+    <div class="row">
+        <div class="col-lg-7 row topRight mb-2">
+            <div class="col-lg-8 row">
+                <h2 class="col-12 head" >{{exam.name}}</h2>
+                <div class="col-6">
+                    <h2>عدد الأسئلة</h2>
+                    <p>{{exam.examQuestions.length}} اختيار من متعدد</p>
+                </div>
+                <div class="col-6">
+                    <h2>عن الامتحان</h2>
+                    <p> تاريخ النشر :{{exam.startTime}}</p>
+                    <p>المادة: {{lecture.subject.name}}</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-12">
+                <!-- <img src="assets/Draw-a-Cute-Cartoon-Person-Step-14.jpg"> -->
+                <div class="img">{{firstCharacter}} {{lastCharacter}}</div>
+                <p class="teacherName">الأستاذ / {{lecture.teacher.fullname}}</p>
+            </div>
+        </div>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-4 topLeft mb-2">
+            <div class="pill" *ngIf="!endOfExam">
+                <p>متبقى</p>
+                <p>{{minutes}} دقيقة {{seconds}} ثانية</p>
+            </div>
+            <div *ngIf="endOfExam">
+                <p  class="text-center">نتيجة الامتحان</p>
+                <p  class="text-center">{{totalResult / exam.examQuestions.length | percent }}</p>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <p>الأسئلة المتبقية</p>
+                    <p>{{unSolvedAnswers}}</p>
+                </div>
+                <div class="col-6">
+                    <p>ما تم ايجابته</p>
+                    <p>{{solvedAnswers}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row exam" >
+        <div class="col-12 row examQues" *ngFor=" let question of exam.examQuestions">
+            <div class="num">{{question.orders}}</div>
+            <div class="col-10 question">
+                <p>{{question.question}}</p>
+            </div>
+            <div class="answer col-12">
+                <div class="choice" *ngFor="let answer of question.questionMcqs" (click)="activeAnswer(answer.orders,question.id)" 
+                    [ngClass]="{
+                                'active':test[question.id].value==answer.orders,
+                                'bg-danger':((test[question.id].correct!=answer.orders && test[question.id].value==answer.orders)||test[question.id].value==0 )&& endOfExam,
+                                'bg-success':test[question.id].correct==answer.orders && endOfExam}">
+                    <label>{{answer.answer}}</label>
+                </div>
+            </div>
+        </div>
+    <div class="examTake row col-12 mt-3">
+        <div class="col-lg-4 col-md-3"></div>
+        <div class="col-lg-4 col-md-6" *ngIf="!endOfExam">
+            <button class="btn m-auto" (click)="getResult()" [disabled]="endOfExam">تسليم الامتحان</button>
+        </div>
+        <div class="col-lg-4 col-md-3"></div>
+    </div>
+</div>
+</div>
+<div class="footer text-center container-fluid">
+    Copyright © 2021 <span>Droos Academy</span>
+</div>

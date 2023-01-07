@@ -1,0 +1,72 @@
+<div class="all">
+  <div class="row">
+    <div class="col-lg-4"></div>
+    <div class="col-lg-4">
+        <div class="card1 today"><p>عدد المحاضرات</p> <div>{{totalCount}}</div></div>
+    </div>
+    <div class="col-lg-4"></div>
+  </div>
+  <div class="table-responsive">
+    <table class="table table-sm">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">العنوان</th>
+          <th scope="col">السعر</th>
+          <th scope="col">المشاهدات الكلية</th>
+          <th scope="col">المشاهدات الفريدة</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let lecture of lectures">
+          <th scope="row">{{lecture.id}}</th>
+          <td>{{lecture.name}}</td>
+          <td>{{lecture.cost}}</td>
+          <td>{{lecture.views}}</td>
+          <td>{{lecture.specialViews}}</td>
+          <td><button class="btn" (click)="goToCode(lecture.id)">استخراج اكواد</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="model" *ngIf="closed">
+    <div class="row">
+      
+      <div class="col-2"></div>
+      <div class="col-8" *ngIf="!codeShow">
+        <div class="closeModel" (click)="closeModel()">x</div>
+        <input type="number" class="codeInput" placeholder="عدد الأكواد" [(ngModel)]="numberOfCodes">
+        <button class="btn" (click)="getCode()">استخراج اكواد</button>
+      </div>
+      <div class="col-8 table-responsive" *ngIf="codeShow">
+        <div class="closeModel" (click)="closeModel()">x</div>
+        <table class="table table-sm" id="codesTable">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">الكود</th>
+              <th scope="col">المحاضرة</th>
+              <th scope="col">الحالة</th>
+              <th scope="col">ميعاد الانتاج</th>
+              <th scope="col">السعر</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let code of codes" >
+              <th scope="row">{{code.id}}</th>
+              <td>{{code.name}}</td>
+              <td>{{selectedLecture.name}}</td>
+              <td>{{code.status}}</td>
+              <td>{{code.createDate}}</td>
+              <td>{{selectedLecture.cost}}</td>
+            </tr>
+          </tbody>
+        </table>
+        <button class="btn btn-primary" (click)="exportTableToExcel()">download</button>
+      </div>
+      <div class="col-2"></div>
+    </div>
+    
+  </div>
+
+</div>

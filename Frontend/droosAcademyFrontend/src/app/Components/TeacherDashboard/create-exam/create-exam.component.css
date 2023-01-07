@@ -1,0 +1,35 @@
+*{
+    font-size: 1.4rem;
+}
+h2{
+    font-size: 1.75rem;
+}
+form{
+    padding: 2rem;
+    border-radius: 1rem;
+    margin: .5rem;
+    color: white;
+    border-color: inherit;
+}
+.submit{
+    margin: auto;
+    display: block;
+    margin-top: 2rem;
+}
+.wrapp2{
+
+    background-color: #D6DCDE;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.likeHeader2{
+    height: 80px;
+    background-color: whitesmoke;
+   
+}
+
+.balgha{
+    background-color: tomato;
+    border-radius: 6px;
+    font-size: 20px;
+    margin: 3px;
+}

@@ -1,0 +1,18 @@
+<app-teacher-navbar></app-teacher-navbar>
+<div class="row dash">
+    <div class="right col-md-4 col-lg-2">
+        <button class="btn addLecture" routerLink="/Teacher/CreateLecture">محاضرة جديدة +</button>
+        <button class="btn" routerLink="/Teacher" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">الاحصائيات</button>
+        <button class="btn" routerLink="/Teacher/Lectures" routerLinkActive="active">المحاضرات</button>
+        <button class="btn" routerLink="/Teacher/PaymentOperations" routerLinkActive="active">عمليات الدفع</button>
+        <button class="btn" routerLink="/Teacher/Students" routerLinkActive="active">الطلبة</button>
+        <!-- <button class="btn btn-primary" routerLink="/Teacher/Settings">الاعدادات</button> -->
+    </div>
+    <div class="left col-md-8 col-lg-10" [ngStyle]="{'min-height': height+'px'}">
+        <div class="container-fluid">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
+
+

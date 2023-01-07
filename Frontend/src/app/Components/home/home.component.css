@@ -1,0 +1,74 @@
+*{
+  direction: rtl;
+  margin:auto;
+  font-size: 1.5rem;
+}
+
+
+.background {
+  background-image: url('../../../assets/Untitled.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: center center;
+  width: 100%;
+}
+
+.content {
+font-weight: bold;
+font-family: Arial, sans-serif;
+margin-top: 10%;
+}
+
+p{
+  color: #305F72;
+  font-size: 33px;
+  /* margin-top: 2rem; */
+  line-height: 2rem;
+}
+h2{
+  text-align: center;
+  color: #F18C8E;
+  font-size: 3.5rem;
+  margin-top: 10px;
+}
+
+.Login{
+  margin: 0;
+  text-align: right;
+  display: inline-block;
+}
+
+.Login button{
+background-color: #305F72;
+color: white;
+border: none;
+margin: 30px 20px;
+width: 200px;
+font-size: 1.5rem;
+}
+
+
+@media (max-width:577px) {
+
+  p{
+    font-size: 2rem;
+    text-align: center;
+    margin: 10px;
+  }
+
+  .Login button{
+    background-color: #305F72;
+    color: white;
+    border: none;
+    width: 80%;
+    margin:10px auto;
+    display: block;
+    }
+    .Login{
+      width: 100%;
+      margin:auto;
+    }
+
+
+}
+

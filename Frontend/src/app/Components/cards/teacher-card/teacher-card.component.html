@@ -1,0 +1,16 @@
+<div class="card" >
+    <img *ngIf="imagePath!=null" [src]="imagePath" class="card-img-top img-circle" >
+    <img *ngIf="imagePath==null" src="assets/Draw-a-Cute-Cartoon-Person-Step-14.jpg" class="card-img-top rounded-circle" >
+    <div class="card-body">
+      <h2 class="card-title">{{teacher.fullname}}</h2>
+      <div>
+        <p class="btn rounded-pill">{{teacher.subject.name}}</p>
+      </div>
+      <p class="card-text my-4">أى هرى عن المدرس </p>
+      <div class="row justify-content-around">
+        <a class="btn btn-1">محاضراتى</a>
+        <a class="btn btn-2">فتح الموقع</a>
+      </div>
+      
+    </div>
+</div>

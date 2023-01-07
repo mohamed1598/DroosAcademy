@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-2">
+        
+    </div>
+    <div class="col-lg-1"></div>
+    <div class="col-lg-2">
+      <div class="card1 today"><p>عدد الطلاب الكلى</p> <div>{{students.length}}</div></div>
+    </div>
+    <div class="col-lg-1"></div>
+    <div class="col-lg-2">
+        
+    </div>
+    <div class="col-lg-2"></div>
+</div>
+<div class="table-responsive">
+  <table class="table table-sm">
+    <thead>
+      <tr>
+        <th scope="col">رقم</th>
+        <th scope="col">الاسم</th>
+        <th scope="col">البريد الالكترونى</th>
+        <th scope="col">رقم الهاتف</th>
+        <th scope="col">المحافظة</th>
+        <th scope="col">المدرسة</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of students">
+        <th scope="row">{{student.id}}</th>
+        <td>{{student.fullname}}</td>
+        <td>{{student.email}}</td>
+        <td>{{student.phoneNumber}}</td>
+        <td>{{student.governorate}}</td>
+        <td>{{student.school}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

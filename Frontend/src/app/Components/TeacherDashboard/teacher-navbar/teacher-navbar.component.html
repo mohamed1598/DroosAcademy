@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container-fluid">
+    <div class="row test">
+      <div class="col-10">
+        <a class="navbar-brand">
+          <app-logo></app-logo>
+        </a>
+      </div>
+      <div class="col-1">
+        <button class="navbar-toggler" (click)="toggleNavbar()" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </div>
+    
+    <div class="collapse navbar-collapse ul" id="navbarSupportedContent" [class.show]="isOpen">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 row">
+          <li class="nav-item">
+            <div class="left-nav row">
+              <div class="col-3">
+                  <img class="image" src="assets/Draw-a-Cute-Cartoon-Person-Step-14.jpg">
+              </div>
+              <div class="nav-item dropdown col-7"> 
+                  <div ngbDropdown class="d-inline-block b2">
+                    <a class="nav-link mt-2 mr-2" id="dropdownBasic1" ngbDropdownToggle>{{loginService.teacher.fullname}}</a>
+                    <div class="dropdown-menu-right" ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                      <button ngbDropdownItem><a id="alink" class="nav-link"(click)="Logout()">Logout</a></button>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </li>
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,44 @@
+*{
+    direction: rtl;
+}
+table{
+    width: 95%;
+    margin-right: 2%;
+    margin-top: 2%;
+    text-align: center;
+    background: rgb(230,101,79);
+    background: linear-gradient(137deg, rgba(230,101,79,1) 20%, rgba(249,122,19,1) 48%, rgba(255,128,0,1) 76%);
+    color: white;
+}
+tbody tr:hover{
+    color: black;
+}
+.btn{
+    display: block;
+    width: 95%;
+    background: rgb(230,101,79);
+    background: linear-gradient(137deg, rgba(230,101,79,1) 20%, rgba(249,122,19,1) 48%, rgba(255,128,0,1) 76%);
+    border-radius: 0.5rem;
+    color: white;
+    border-color: inherit;
+    font-size: 1rem;
+}
+.btn:hover{
+    background: white;
+    color: black;
+    border-color: black;
+}
+h1{
+    text-align: center;
+    color:rgb(230,101,79);
+    margin-top: 2rem;
+}
+.form-control{
+    margin: 3rem;
+    color:black;
+    /* background: rgb(230,101,79);
+    background: linear-gradient(137deg, rgba(230,101,79,1) 20%, rgba(249,122,19,1) 48%, rgba(255,128,0,1) 76%); */
+}
+input::placeholder{
+    color: black;
+}

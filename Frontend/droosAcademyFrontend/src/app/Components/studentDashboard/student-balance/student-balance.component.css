@@ -1,0 +1,155 @@
+*{
+    direction: rtl;
+    text-align: center;
+    font-size: 1.2rem;
+}
+.thatColor{
+    color: #F19895;
+}
+.thatColor2{
+    color:#305F72;
+}
+h2{
+    text-align: center;
+    font-size: 2rem;
+    margin: 2rem;
+}
+.container-fluid{
+    background-color: #F1F2F6;
+}
+.container{
+    background-color: white;
+    padding: 2rem;
+}
+
+img{
+    border-radius: 50%;
+    width: 200px;
+}
+
+.fbtn{
+    margin: .5rem 0;
+    background-color: #F19895;
+    border:none;
+    height: 2.5rem;
+    width: 6rem;
+    position: relative;
+    text-align: left;
+    font-size: 1.2rem;
+}
+.fbtn span{
+    border-radius: 50%;
+    background-color: #FFC850;
+    display: inline-block;
+    height: 2.5rem;
+    width: 2.5rem;
+    position: absolute;
+    top:0;
+    left: 70%;
+    text-align: center;
+    padding: .3rem;
+}
+p{
+    margin-top:auto;
+}
+.col-4{
+    margin: auto;
+}
+.sbtn button{
+    background-color:#F19895;
+    border: none;
+    margin: .5rem;
+    width: 10rem;
+}
+.info{
+    margin: 1rem 0;
+    text-align: left;
+}
+.info p{
+    text-align: left;
+}
+.num{
+    border-radius: 50%;
+    background-color: #FFC850;
+    display: inline-block;
+    height: 2.5rem;
+    width: 2.5rem;
+    top:0;
+    left:3.5rem;
+    text-align: center;
+    padding: .3rem;
+    padding-top: .6rem;
+    color: white;
+    margin: .5rem;
+}
+.mm{
+    text-align: left;
+}
+.tex2{
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: .5rem 0;
+    text-align: right;
+}
+.img{
+    position: relative;
+    width: 15%;
+    margin: auto;
+}
+img{
+    width: 100%;
+}
+
+.img span{
+    border-radius: 50%;
+    background-color: #F4A889;
+    height: 2.4rem;
+    width: 2.4rem;
+    position: absolute;
+    top:6rem;
+    left:0;
+    padding: .4rem;
+    padding-top: .6rem;
+    margin: auto;
+    cursor: pointer;
+    opacity: .5;
+    color: white;
+}
+.img:hover span{
+    opacity: 1;
+}
+
+.fa-2x{
+    font-size: 1.5rem;
+    margin-right: 4px;
+    margin-left: 2px;
+}
+.points{
+    direction: ltr;
+}
+/* .text-center
+{
+    text-align: center;
+} */
+
+@media(max-width:991px){
+    .fbtn span{
+        left: 90%;
+    }
+    .img{
+        width: 80%;
+    }
+    .hidden{
+        display: none;
+    }
+}
+@media(max-width:580px){
+    .fbtn span{
+        left: 85%;
+    }
+}
+@media(max-width:420px){
+    .fbtn span{
+        left: 78%;
+    }
+}

@@ -1,0 +1,9 @@
+<div class="wrapper" [ngClass]="{'hidden': !spinnerService.visibility}">
+  <div class="spinner">
+    <mat-spinner [diameter]="100" *ngIf="spinnerService.visibility"></mat-spinner>
+  </div>
+</div>
+<div [ngClass]="{'hidden': spinnerService.visibility}">
+  <router-outlet></router-outlet>
+</div>
+

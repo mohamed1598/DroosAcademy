@@ -1,0 +1,100 @@
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h2 class="text-center">شحن الرصيد</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="container rounded-3">
+                <div class="row text-center">
+                    <div class="col-12">
+                        <h2 class="text-center">شحن عن طريق الكود</h2>
+                    </div>
+        
+                    <div class="col-lg-10 col-md-8">
+                        <input type="text" name="" id="" class="form-control" placeholder="الكود" [(ngModel)]="code.name">
+                    </div>
+
+                    <div class="col-lg-2 col-md-4">
+                        <button class="btn button text-white" (click)="activateCode()">شحن</button>
+                    </div>
+                    <div class="col-lg-10 col-md-8" *ngIf="message!=''" style="margin-top: 2%; text-align: center;"><h3 [ngClass]="{'bg-danger':message == 'تم استخدام هذا الكود من قبل','bg-success':message=='تم تنفيذ العملية بنجاح'}" style="text-align: center;">{{message}}</h3></div>
+                </div>
+            </div>        
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="container rounded-3">
+                <div class="row text-center">
+                    <div class="col-12">
+                        <h2 class="text-center">طرق الدفع المختلفة</h2>
+                    </div>
+                    <div class="col-12 row">
+                        <div class="col-lg-5 col-md-4 col-1"></div>
+                    
+                        <div class="col-lg-2 col-md-4 col-10">
+                            <button class="btn btn-primary">فودافون كاش</button>
+                        </div>
+                        <div class="col-lg-5 col-md-4 col-1"></div>
+                    </div>
+            </div>
+
+            <div class="row">
+                <div class="row col-12">
+                    <div class="col-lg-3"></div>
+                    <div class="col-lg-6">
+                        <div class="text-center" style="margin: 3rem 0;">
+                            <h2 class="text-center">كيفية الدفع؟</h2>
+                            <P class="text-center">قم بتحويل المبلغ الذي تريد شحنه الي رقم 010101203120 و رفع صورة المعاملة و سوف يقوم احد موظفينا بأضافة الرصيد لحسابك</P>
+                        </div>
+                    </div>
+                    <div class="col-lg-3"></div>
+                </div>
+                <div class="row col-12" style="margin-bottom: 3rem;">
+                    <div class="col-3"></div>
+                    <div class="col-6"><hr></div>
+                    <div class="col-3"></div>
+                </div>
+
+                <div class="col-lg-4"></div>
+                
+                <div class="col-lg-4">
+                    <input type="text" name="" id="" class="form-control" placeholder="المبلغ">
+                </div>
+                <div class="col-lg-4"></div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4"></div>
+                <div class="col-lg-4">
+                    <div class="upload">
+                        <div class="button-wrapper">
+                            <span class="label rounded-3  text-center">
+                              رفع صورة المعاملة
+                              <br>
+                              <br>
+                              <div class=" text-center"><i class="fa fa-2x fa-upload  text-center"></i></div>
+                            </span>
+                              <input type="file" name="upload" id="upload" class="upload-box" placeholder="Upload File">
+                          </div>
+                    </div>
+                </div>
+                <div class="col-lg-4"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-5 col-md-4 col-2"></div>
+                <div class="col-lg-2 col-md-4 col-8">
+                    <button class="btn btn-primary"> تأكيد</button>
+                </div>
+                <div class="col-lg-5 col-md-4 col-2"></div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>

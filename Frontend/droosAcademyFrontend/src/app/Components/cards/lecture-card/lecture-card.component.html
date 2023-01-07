@@ -1,0 +1,25 @@
+<div class="card" [ngClass]="{'grayCard': !isLectureAvailable()}">
+  <div class="top">
+    <div class="cost">{{lecture.cost}}</div>
+    <div class="fullname">أ/{{lecture.teacher.fullname}}</div>
+    <div class="subject">{{lecture.subject.name}}</div>
+    <div class="time">{{lecture.time}}h</div>
+    <div class="date">{{publishedDate}}</div>
+   </div>
+    
+    <div class="card-body">
+      <h2 class="card-title">{{lecture.name}}</h2>
+      <hr>
+      <p class="card-text" *ngIf="lecture.studentHaveLectures!=null">تاريخ الشراء : {{purchasedDate}}</p>
+      <div class="row" *ngIf="isLectureAvailable()">
+        <div class="col-3"></div>
+        <div class="col-6"><a class="btn btn-1" routerLink="/Lecture" (click)="goToLecture()">مشاهدة</a></div>
+        <div class="col-3"></div>
+      </div>
+      <div class="row" *ngIf="!isLectureAvailable()">
+        <div class="col-1"></div>
+        <div class="col-10"><a class="btn btn-outline-primary btn-1">لقد انتهت صلاحية هذه المحاضرة</a></div>
+        <div class="col-1"></div>
+      </div>
+    </div>
+</div>

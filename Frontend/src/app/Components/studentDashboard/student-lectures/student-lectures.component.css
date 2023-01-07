@@ -1,0 +1,19 @@
+*{
+    direction: rtl;
+    text-align: center;
+    font-size: 1.3rem;
+}
+.row{
+    padding-bottom: 3rem;
+}
+
+.noLectures{
+    position: relative;
+}
+h2{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    margin: 2rem;
+}

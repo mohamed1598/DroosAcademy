@@ -1,0 +1,158 @@
+body{
+    direction: rtl;
+}
+
+.btn1{
+    background-color: blue;
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.btn2,.btn3{
+    background-color: #E4818E;
+    width: 90px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: white;
+    position: relative;
+   
+}
+.btn2::after{
+    content: "LE";
+    position: absolute;
+    background-color: #FFC850;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    right: -5%;
+}
+.btn3::after{
+    content: "XP";
+    position: absolute;
+    background-color: #FFC850;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    right: -5%;
+}
+
+header{
+    height: 70px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.twoBills{
+    left: 0%;
+}
+
+.toBlock{
+    display: flex;
+}
+
+@media screen and (max-width:990px) {
+
+    .toBlock{
+        display: block;
+    }
+    .right-right{
+        justify-content: center !important;
+    }
+    .right-left{
+        justify-content: center !important;
+    }
+
+}
+
+@media screen and (max-width:767px){
+
+    .left-left{
+       text-align: center !important;
+    }
+}
+
+
+.titlechange{
+    font-size: 40px;
+    font-weight: 800;
+}
+.changeDirection{
+    text-align:right
+ 
+}
+
+
+
+.right-right{
+    justify-content:flex-start ;
+}
+.right-left{
+    justify-content: flex-end;
+}
+
+.left-left{
+    z-index: 5;
+}
+h5{
+    text-align: center;
+}
+
+
+
+.midButtons{
+    border: solid gray 1px;
+    width: 200px;
+    margin: 1.5rem 0;
+
+}
+.likeHeader{
+    height: 80px;
+    background-color: #D6DCDE;
+   
+}
+.likeHeader2{
+    height: 80px;
+    background-color: whitesmoke;
+   
+}
+
+.balgha{
+    background-color: tomato;
+    border-radius: 6px;
+    font-size: 20px;
+    margin: 3px;
+}
+.bg-dark{
+    border-radius: 6px;
+    font-size: 20px;
+    margin: 3px;
+}
+.fa{
+    margin: 0;
+    text-align: center;
+}
+.wrapp{
+
+    background-color: whitesmoke;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.wrapp2{
+
+    background-color: #D6DCDE;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+h3{
+    text-align: center;
+}
+
+iframe{
+    width:  100%!important;
+}
+

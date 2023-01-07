@@ -1,0 +1,29 @@
+nav{
+    background: inherit;
+    width: 100%;
+}
+.btn{
+    display: block;
+    width: 100%;
+    background: rgb(230,101,79);
+    background: linear-gradient(137deg, rgba(230,101,79,1) 20%, rgba(249,122,19,1) 48%, rgba(255,128,0,1) 76%);
+    border-radius: 0.5rem;
+    color: white;
+    font-size: 1rem;
+    border-color: white;
+    text-align: center;
+}
+.btn:hover{
+    background: white;
+    color: black;
+    border-color: black;
+}
+ul{
+    width: 100%;
+}
+.row{
+    width: 100%;
+}
+.last{
+    padding:0;
+}

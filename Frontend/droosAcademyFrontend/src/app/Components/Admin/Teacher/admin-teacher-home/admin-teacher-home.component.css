@@ -1,0 +1,18 @@
+*{
+    direction: rtl;
+    width: 100%;
+}
+.row{
+    margin: 0;
+    background: rgb(230,101,79);
+    background: linear-gradient(137deg, rgba(230,101,79,1) 20%, rgba(249,122,19,1) 48%, rgba(255,128,0,1) 76%);
+}
+/* .col-2{
+    border-left: black 0.1px solid;
+    border-top: black 0.1px solid;
+} */
+.col-10{
+    background: rgb(241,199,160);
+    background: linear-gradient(77deg, rgba(241,199,160,1) 27%, rgba(241,124,14,1) 87%);
+    min-height:35rem;
+}

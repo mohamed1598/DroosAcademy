@@ -1,0 +1,9 @@
+*{
+    direction: ltr;
+    text-align: left;
+}
+.wrapper{
+    width: 80%;
+    margin: auto;
+    margin-top: 15px;
+}

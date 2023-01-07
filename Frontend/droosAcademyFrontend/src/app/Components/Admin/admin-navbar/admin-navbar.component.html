@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand col" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+      <app-logo></app-logo>
+    </a>
+
+    <button class="navbar-toggler" type="button" (click)="toggleNavbar()" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="wrapper" [class.show]="isOpen">
+        <ul class="navbar-nav ml-auto my-2 my-lg-0">
+            <div class="row">
+                <div class="col-3">
+                    <li class="nav-item">
+                        <a class="nav-link btn" routerLink="/Admin" routerLinkActive="active" >الطلاب</a>
+                    </li>
+                </div>
+                <div class="col-3">
+                    <li class="nav-item">
+                        <a class="nav-link btn" routerLink="/Admin/Seller" routerLinkActive="active" >الموزعين</a>
+                    </li>
+                </div>
+                <div class="col-3">
+                    <li class="nav-item">
+                        <a class="nav-link btn" routerLink="/Admin/Teacher" routerLinkActive="active" >المدرسين</a>
+                    </li>
+                </div>
+                <div class="col-3">
+                    <li class="nav-item last-li btn">
+                        <div class="nav-item dropdown col-6"> 
+                            <div ngbDropdown class="d-inline-block b2">
+                              <a class="nav-link last" id="dropdownBasic1" ngbDropdownToggle>محمد الشافعى</a>
+                              <div class="dropdown-menu-right" ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                <button ngbDropdownItem><a id="alink" class="nav-link" (click)="Logout()">Logout</a></button>
+                              </div>
+                            </div>
+                        </div>
+                    </li>
+                </div>
+            </div>
+        </ul>
+
+    </div>
+</nav>

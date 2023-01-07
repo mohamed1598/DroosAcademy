@@ -1,0 +1,82 @@
+table{
+    margin-top: 2rem;
+    background-color: white;
+    text-align: center;
+}
+td,tr {
+    white-space: nowrap;
+    text-align: center;
+}
+tbody tr:hover{
+    background-color: #F1F2F6;
+}
+.card1{
+    width:100%;
+    height: 7rem;
+    padding-top: 0.2rem;
+    text-align: right;
+    margin-top: 5rem;
+    padding: 0.4rem;
+    border-radius: 0.4rem;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+    color: white;
+}
+.card1 div{
+    text-align: right;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border-width: 20px;
+    background-color: red;
+    padding-top:1.2rem;
+    color: white;
+    position: absolute;
+    top:-0.5rem;
+    left:-0.5rem;
+    padding-right: .8rem;
+}
+.today{
+    background: rgb(28,81,117);
+    background: linear-gradient(107deg, rgba(28,81,117,1) 72%, rgba(51,150,216,1) 97%);
+}
+.today div{
+    background: rgb(28,81,117);
+    background: linear-gradient(105deg, rgba(28,81,117,1) 0%, rgba(236,224,224,1) 100%);
+}
+.yesterday{
+    background: rgb(250,114,116);
+    background: linear-gradient(105deg, rgba(250,114,116,1) 49%, rgba(242,149,146,1) 58%);
+}
+.yesterday div{
+    background: rgb(250,114,116);
+    background: linear-gradient(107deg, rgba(250,114,116,1) 10%, rgba(236,204,204,1) 70%);
+}
+.thismonth{
+    background: rgb(251,184,26);
+    background: linear-gradient(105deg, rgba(251,184,26,1) 29%, rgba(236,199,112,1) 72%);
+}
+.thismonth div{
+    background: rgb(251,184,26);
+    background: linear-gradient(107deg, rgba(251,184,26,1) 10%, rgba(251,241,218,1) 67%);
+}
+.card1 p{
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    top: 70%;
+    text-align: right;
+}
+.balance{
+    direction: ltr;
+}
+.balanceTake{
+    width: 100%;
+    margin-top: 6rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    background: rgb(230,101,79);
+    background: linear-gradient(137deg, rgba(230,101,79,1) 20%, rgba(249,122,19,1) 48%, rgba(255,128,0,1) 76%);
+    
+}

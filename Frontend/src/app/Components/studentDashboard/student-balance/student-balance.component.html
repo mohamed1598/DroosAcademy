@@ -1,0 +1,91 @@
+<div class="container-fluid" *ngIf="student != null">
+    <div class="row">
+        <div class="col-12">
+            <h2 style="padding: 3rem;text-align: center;" class="thatColor">حسابي</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 text-center row" style="direction: ltr;">
+                        <div class="col-8">
+                            <button class="btn btn-primary rounded-pill fbtn" style="direction: ltr; display: block; width: 100%;">{{student.balance}}<span>LE</span></button>
+                        </div>
+                        <div class="col-4">
+                            <p style="display: block; width: 100%;">الرصيد</p>
+                        </div>
+                        
+                        <div class="points col-12">
+                            <button class="btn btn-primary"  style="width: 100%;direction: ltr; display: block;" routerLink="/Student/Payment">شحن رصيد</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-6"></div>
+                    <div class="col-lg-3 text-center row" style="direction: ltr;">
+                        <div class="col-8">
+                            <button class="btn btn-primary rounded-pill fbtn" style="direction: ltr; display: block; width: 100%;">{{student.bonus}}<span>XP</span></button>
+                        </div>
+                        <div class="col-4">
+                            <p style="display: block; width: 100%;">النقاط</p>
+                        </div>
+                        
+                        <div class="points col-12">
+                            <button class="btn btn-primary"  style="width: 100%;direction: ltr; display: block;">استبدال النقاط</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8"><hr></div>
+                    <div class="col-2"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-5"></div>
+                    <div class="col-lg-2 text-center img">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/18320/profile/profile-512.jpg?3">
+                        <!-- <a><span><i class="fa fa-edit"></i></span></a> -->
+                    </div>
+                    <div class="col-lg-5"></div>
+                    <h2 class="text-center col-12 thatColor">{{student.fullname}}</h2>
+                </div>
+
+                <div class="row" style="direction: ltr;">
+                    <div class="col-lg-2 hidden"></div>
+                    <div class="col-lg-4 col-md-5 info">
+                        <p class="mb-4 thatColor2">  {{student.email}}  <i class="fa fa-envelope thatColor"></i> </p>
+                        <p class="thatColor2">{{student.phoneNumber}} <i class="fa fa-2x fa-mobile-phone thatColor"></i> </p>
+                    </div>
+                    <div class="col-lg-2 col-md-1"></div>
+                    <div class="col-lg-3 col-md-5 text-center sbtn" style="direction: rtl;"> 
+                        <button class="btn btn-primary">تعديل الحساب</button>
+                        <button class="btn btn-primary">تغيير كلمة المرور</button>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8">
+                        <hr><br>
+                        <div class="row">
+                            <div class="col-lg-4 col-8 tex2 thatColor"> عدد المحاضرات التي تم شرائها </div>
+                            <div class="col-lg-4 hidden"></div>
+                            <div class="col-3 mm"><span class="num">{{lectureNumbers}}</span></div>
+                        </div>
+        
+                        <div class="row" >
+                            <div class="col-lg-4 col-8 tex2 thatColor"> عدد المعلمين </div>
+                            <div class="col-lg-4 hidden"></div>
+                            <div class="col-3 mm"><span class="num">{{teacherNumbers}}</span></div>
+                        </div>
+
+
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

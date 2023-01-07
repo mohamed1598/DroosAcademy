@@ -1,0 +1,50 @@
+
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-10">
+          <a class="navbar-brand">
+            <app-logo></app-logo>
+          </a>
+        </div>
+        <div class="col-2">
+          <button class="navbar-toggler" (click)="toggleNavbar()" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+      
+      <div class="collapse navbar-collapse ul row" id="navbarSupportedContent" [class.show]="isOpen">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 row col-lg-12">
+          <div class="right row col-lg-7">
+            <!-- <div class="col-lg-3"></div> -->
+            <li class="nav-item col-lg-3">
+              <a class="nav-link" routerLink="/Student" [queryParams]="{ id: queryParamId}" routerLinkActive="active" >حسابى</a>
+            </li>
+            <li class="nav-item col-lg-3">
+              <a class="nav-link" routerLink="/Student/Lectures" [queryParams]="{ id: queryParamId}" routerLinkActive="active" >محاضرتى</a>
+            </li>
+            <li class="nav-item col-lg-3">
+              <a class="nav-link" routerLink="/Student/Teachers" [queryParams]="{ id: queryParamId}" routerLinkActive="active" >المعلمين</a>
+            </li>
+            <!-- <div class="col-lg-3"></div> -->
+          </div>
+          <li class="nav-item removeBackground">
+            <div class="left-nav row">
+              <div class="col-2">
+                  <img class="image" src="assets/Draw-a-Cute-Cartoon-Person-Step-14.jpg">
+              </div>
+              <div class="nav-item dropdown col-9"> 
+                  <div ngbDropdown class="d-inline-block b2">
+                    <a class="nav-link" id="dropdownBasic1" ngbDropdownToggle>{{student.fullname}}</a>
+                    <div class="dropdown-menu-right" ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                      <button ngbDropdownItem><a id="alink" class="nav-link"(click)="Logout()">Logout</a></button>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>

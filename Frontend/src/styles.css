@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/font-awesome/css/font-awesome.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap%27');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+*{
+    direction: rtl;
+    text-align: right;
+    font-family: 'Amiri', sans-serif !important;
+    /* font-size: 0.8rem; */
+}
+i{
+    font-family: 'FontAwesome' !important;
+}
+html, body { height: 100%;margin: 0;padding: 0; }

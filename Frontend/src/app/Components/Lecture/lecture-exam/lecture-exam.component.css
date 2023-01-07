@@ -1,0 +1,132 @@
+*{
+    direction: rtl;
+}
+.topRight{
+    background-color: #2E5361;
+    color: white;
+    text-align: right;
+    border-radius: 0.8rem;
+    padding-left: 0rem;
+    padding-bottom: 1rem;
+}
+.topRight h2{
+    font-size: 1rem;
+}
+.head{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.img{
+    width: 6.5rem;
+    height: 6.5rem;
+    border-radius: 50%;
+    
+    padding: 1rem;
+    padding-top: 2.2rem;
+    background-color: white;
+    color: black;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: auto;
+    margin-top: 2.4rem;
+}
+.teacherName{
+    text-align: center;
+
+}
+.col-4 p{
+    text-align: left;
+    width: 100%;
+}
+.topLeft{
+    background-color: #2E5361;
+    color: white;
+    text-align: center;
+    border-radius: 0.8rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+.topLeft .pill{
+    background-color: #EC8689;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    border-radius: 4rem;
+    
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+}
+.topLeft .pill p{
+    text-align: center;
+    margin-bottom: 0rem;
+    font:bold;
+}
+.topLeft .row .col-6{
+    margin-top: 1rem;
+}
+.topLeft .row .col-6 p{
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+}
+.row{
+    margin-right: 0;
+    margin-left: 0;
+}
+.exam{
+    border-radius: 1rem;
+    background-color: #F1F2F6;
+    direction: rtl;
+    text-align: right;
+    margin-top: 3rem;
+    padding:1rem;
+}
+.exam .examQues{
+    margin-top: 1.5rem;
+}
+.num{
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+    color: white;
+    background-color: #F18C8E;
+    text-align: center;
+    padding-top: 0.3rem;
+    margin-top: 0.3rem;
+}
+.question{
+    margin-top: 0.5rem;
+}
+.examTake{
+    direction: ltr;
+    margin-bottom: 4rem;
+}
+.choice{
+    background-color: white;
+    padding: 0.25rem 1rem;
+    margin: 0.25rem;
+}
+.choice:hover,.active{
+    background-color: #2E5361;
+    color: white;
+}
+.examTake button{
+    background-image: linear-gradient(to left, #f7ab7a, #fdb472, #ffbe6b, #ffc863, #ffd45c);
+    width: 80%;
+    margin: auto;
+    color: white;
+    border-radius: 0.5rem;
+    margin-top: 2rem;
+    border-color: inherit;
+}
+.footer{
+    background-color: #305F72;
+    color: white;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    padding-left: 1.3rem;
+    width: 100%;
+}
+.footer span{
+    color: #FFC850;
+}

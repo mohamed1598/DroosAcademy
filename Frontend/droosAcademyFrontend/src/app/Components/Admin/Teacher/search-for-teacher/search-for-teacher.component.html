@@ -1,0 +1,33 @@
+<h1>البحث عن مدرس معين</h1>
+<div class="row">
+    <div class="col-2"></div>
+    <div class="col-8"><input class="form-control" [(ngModel)]="search" placeholder="ابحث عن مدرس"></div>
+    <div class="col-2"></div>
+    <div class="col-4"><button class="btn btn-primary" (click)="searchById()">ابحث عن طريق الرقم التعريفى</button></div>
+    <div class="col-4"><button class="btn btn-primary" (click)="searchByPhoneNumber()">ابحث عن طريق رقم الهاتف</button></div>
+    <div class="col-4"><button class="btn btn-primary" (click)="searchByName()">ابحث عن طريق الاسم</button></div>
+</div>
+<table class="table table-sm">
+    <thead>
+      <tr>
+        <th scope="col">رقم</th>
+        <th scope="col">الاسم</th>
+        <th scope="col">البريد الالكترونى</th>
+        <th scope="col">رقم الهاتف</th>
+        <th scope="col">المادة</th>
+        <th scope="col">النسبة</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody *ngIf="teachers!=null">
+      <tr *ngFor="let teacher of teachers">
+        <th scope="row">{{teacher.id}}</th>
+        <td>{{teacher.fullname}}</td>
+        <td>{{teacher.email}}</td>
+        <td>{{teacher.phoneNumber}}</td>
+        <td>{{teacher.subject.name}}</td>
+        <td>{{teacher.percentage}}</td>
+        <td><button class="btn btn-primary" routerLink="/Teacher">افتح صفحة المدرس</button></td>
+      </tr>
+    </tbody>
+</table>

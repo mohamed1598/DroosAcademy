@@ -1,0 +1,45 @@
+*{
+    direction: rtl;
+    text-align: center;
+}
+img{
+    height: 30%;
+    border-color: black;
+    width: 30%;
+    position: absolute;
+    left: 35%;
+    top: -15%;
+}
+
+.card {
+    margin: 10px;
+    margin-top: 6rem;
+    background-color: white;
+    text-align: center;
+    position: relative;
+    padding-top: 2.5rem;
+    padding-bottom: 1.5rem;
+    width: 90%;
+    border-radius: 1rem;
+}
+.rounded-pill{
+    background-color: #FFC850;
+    color: white;
+    width: 7rem;
+    height: 2rem;
+    padding-top: 0 !important;
+}
+.btn-1{
+    width: 40%;
+    background-color: #F19895;
+    color: white;
+}
+.btn-2{
+    width: 40%;
+    background-color: #3498DB;
+    color: white;
+}
+.card-text{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}

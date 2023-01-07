@@ -1,0 +1,13 @@
+*{
+    direction: rtl;
+    background: rgb(230,101,79);
+    background: linear-gradient(137deg, rgba(230,101,79,1) 20%, rgba(249,122,19,1) 48%, rgba(255,128,0,1) 76%);
+}
+app-admin-navbar{
+    width: 100%;
+}
+.nav{
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}

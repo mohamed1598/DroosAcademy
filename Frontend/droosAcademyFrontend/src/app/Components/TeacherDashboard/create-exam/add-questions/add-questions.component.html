@@ -1,0 +1,117 @@
+
+<div class="container" *ngIf="exam && lecture">
+    <div class="row">
+        <div class="col-lg-7 row topRight mb-2">
+            <div class="col-lg-8 row">
+                <h2 class="col-12 head" >{{exam.name}}</h2>
+                <div class="col-6">
+                    <h2>عدد الأسئلة</h2>
+                    <p>{{exam.examQuestions.length}} اختيار من متعدد</p>
+                </div>
+                <div class="col-6">
+                    <h2>عن الامتحان</h2>
+                    <p> تاريخ النشر :{{exam.startTime}}</p>
+                    <p>المادة: {{lecture.subject.name}}</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-12">
+                <!-- <img src="assets/Draw-a-Cute-Cartoon-Person-Step-14.jpg"> -->
+                <div class="img">{{firstCharacter}} {{lastCharacter}}</div>
+                <p class="teacherName">الأستاذ / {{lecture.teacher.fullname}}</p>
+            </div>
+        </div>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-4 topLeft mb-2">
+            <div class="pill" *ngIf="!endOfExam">
+                <p>متبقى</p>
+                <p>{{minutes}} دقيقة {{seconds}} ثانية</p>
+            </div>
+            <div *ngIf="endOfExam">
+                <p  class="text-center">نتيجة الامتحان</p>
+                <p  class="text-center">{{totalResult / exam.examQuestions.length | percent }}</p>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <p>الأسئلة المتبقية</p>
+                    <p>{{unSolvedAnswers}}</p>
+                </div>
+                <div class="col-6">
+                    <p>ما تم ايجابته</p>
+                    <p>{{solvedAnswers}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row exam" >
+        <div class="col-12 row examQues" *ngFor=" let question of exam.examQuestions">
+            <div class="num">{{question.orders}}</div>
+            <div class="col-10 question">
+                <p>{{question.question}}</p>
+            </div>
+            <div class="answer col-12">
+                <div class="choice" *ngFor="let answer of question.questionMcqs" [ngClass]="{'bg-success':question.correctAnswer == answer.orders}">
+                    <label>{{answer.answer}}</label>
+                </div>
+            </div>
+        </div>
+        <div class="examTake row col-12 mt-3" *ngIf="!show">
+            <div class="col-lg-4 col-md-3"></div>
+            <div class="col-lg-4 col-md-6">
+                <button class="btn m-auto" (click)="openAddQuestion()">زيادة سؤال</button>
+            </div>
+            <div class="col-lg-4 col-md-3"></div>
+        </div>
+        <form class="bg-dark" *ngIf="show">
+            <div class="form-group">
+                <label for="questionName">عنوان السؤال</label>
+                <input type="text"  name="questionName" placeholder="السؤال" [(ngModel)]="question1.question" #questionName="ngModel"  id="questionName" class="form-control" required minlength="7">
+                <div class="alert alert-danger" *ngIf=" questionName.touched && questionName.invalid">
+                    <div>ادخل عنوان صحيح لالامتحان</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-lg-3 col-md-1"></div>
+                    <div class="col-lg-6 col-md-10">
+                        <button class="btn btn-success submit"(click)="addQuestion()" [disabled]="questionName.invalid">اضافة السؤال</button>
+                    </div>
+                    <div class="col-lg-3 col-md-1"></div>
+                </div>
+            </div>
+        </form>
+        <form class="bg-dark" *ngIf="showAnswer">
+            <div class="form-group">
+                <label for="answerName">الاجابة</label>
+                <input type="text"  name="answerName" placeholder="الاجابة" [(ngModel)]="answer" #answerName="ngModel"  id="answerName" class="form-control" required minlength="2">
+                <div class="alert alert-danger" *ngIf=" answerName.touched && answerName.invalid">
+                    <div>ادخل اجابة صحيحة</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-lg-3 col-md-1"></div>
+                    <div class="col-lg-6 col-md-10">
+                        <button class="btn btn-success submit" type="submit" (click)="addAnswer()" [disabled]="answerName.invalid">اضافة اجابة</button>
+                    </div>
+                    <div class="col-lg-3 col-md-1"></div>
+                </div>
+            </div>
+        </form>
+
+        <div class="col-12 row examQues" *ngIf="show||showAnswer">
+            <div class="num">{{question1.orders}}</div>
+            <div class="col-10 question">
+                <p>{{question1.question}}</p>
+            </div>
+            <!-- (click)="activeAnswer(answer.orders,question.id)"  -->
+            <div class="answer col-12">
+                <div class="choice" *ngFor="let answer of ListOfAnswers" (click)="activeAnswer(answer.orders)">
+                    <label>{{answer.answer}}</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer text-center container-fluid">
+    Copyright © 2021 <span>Droos Academy</span>
+</div>

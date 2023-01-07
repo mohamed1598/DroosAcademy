@@ -1,0 +1,29 @@
+.ul{
+    direction: ltr;
+}
+li{
+    margin-left: 20px;
+    font-size: 18px;
+}
+.navbar{
+    padding-top: 0;
+}
+.image{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+.navbar-brand{
+    font-weight: bold;
+    padding-top: 0;
+    width: 100%;
+    /* height: 5rem; */
+}
+.navbar-brand app-logo{
+    width: 100%;
+}
+@media(max-width:991px){
+    .test{
+        width: 100%;
+    }
+}

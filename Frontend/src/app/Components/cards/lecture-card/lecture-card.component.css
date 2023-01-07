@@ -1,0 +1,92 @@
+.card{
+    margin-top: 3rem;
+    border-radius: 1rem;
+}
+.grayCard{
+    filter: grayscale(1);
+}
+.top{
+    background-image: url(../../../../assets/download.jfif);
+    height: 10rem;
+    position: relative;
+    color: white;
+    border-radius: 1rem 1rem 0 0;
+}
+.fullname{
+    /* width: 50%; */
+    height: 2rem;
+    background-color: #F19895;
+    width: 50%;
+    padding-right: 0.5rem;
+    border-radius: 1rem 0 1rem 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    padding-top: 0.25rem;
+}
+.subject{
+    width: 30%;
+    height: 2rem;
+    background-color: #FFC850;
+    display: inline-block;
+    padding-right: 0.5rem;
+    border-radius: 0.3rem;
+    position: absolute;
+    top: 0;
+    left: 70%;
+    text-align: center;
+    border-radius: 0 1rem 0 1rem;
+    padding-top: 0.25rem;
+}
+.date{
+    width: 30%;
+    height: 15%;
+    background-color: #415860;
+    display: inline-block;
+    padding-right: 0.5rem;
+    border-radius: 0.3rem;
+    position: absolute;
+    top: 85%;
+    left: 70%;
+    text-align: center;
+    opacity: 0.85;
+}
+.time{
+    width: 30%;
+    height: 15%;
+    background-color: #51A6E0;
+    display: inline-block;
+    padding-right: 0.5rem;
+    border-radius: 0.3rem;
+    position: absolute;
+    top: 85%;
+    left: 0%;
+    text-align: center;
+    opacity: 0.85;
+}
+.cost{
+    width: 30%;
+    height: 15%;
+    background-color: #62767c;
+    display: inline-block;
+    padding-right: 0.5rem;
+    border-radius: 0.3rem;
+    position: absolute;
+    top: 68%;
+    left: 0%;
+    text-align: center;
+    opacity: 0.85;
+}
+h2{
+    text-align: center;
+    font-size: 1.3rem;
+}
+p{
+    text-align: center;
+}
+.btn-1{
+    width: 100%;
+    background-color: #F19895;
+    color: white;
+}

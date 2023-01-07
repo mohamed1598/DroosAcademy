@@ -1,0 +1,105 @@
+<div class="container">
+    <div class="row">
+        <div  class="col-6 col-md-4 mt-2">
+            <app-logo></app-logo>
+        </div>
+        <div class="col-1 col-md-5 col-lg-6 hide"  ></div>
+        <div class="col-6 col-md-3 col-lg-2 mt-4">
+            <button class="btn back" routerLink="/TeacherHome">العودة <i class="fa fa-long-arrow-left"></i></button>
+        </div>
+    </div>
+    <div class="row body">
+        <div class="right  col-lg-7">
+            <div class="message row">
+                <span >1</span>
+                <p> قم بادخال اسمك بالكامل يفضل الاسم ثلاثى </p>
+            </div>
+            <div class="message row">
+                <span class="number">2</span>
+                <p> قم بادخال رقم هاتفك المكون من 11 رقم </p>
+            </div>
+            <div class="message row">
+                <span class="number">3</span>
+                <p> قم بادخال بريدك الالكترونى - مهم جدا لاستعادة كلمة المرور </p>
+            </div>
+            <div class="message row">
+                <span class="number">4</span>
+                <p>اختر السنة الدراسية</p>
+            </div>
+            <div class="message row">
+                <span class="number">5</span>
+                <p> قم بكتابة كلمة المرور و تاكيدها . وتاكد من حفظها فى مكان امن. </p>
+            </div>
+            <div class="message row">
+                <span class="number">6</span>
+                <p>قم بالتحديد على الموافقة على الشروط و السياسات الخاصة بالمنصة</p>
+            </div>
+            <div class="message row">
+                <span class="number">7</span>
+                <p>تهانينا يمكنك الان الضغط على تسجيل و يسعدنا ان نرحب بك</p>
+            </div>
+        </div>
+        <div class="col-lg-5 mb-5">
+            <form class="m-auto" #form="ngForm">
+                <div class="headings">
+                    <h2>تسجيل حساب جديد</h2>
+                </div>
+                <div class="form-group">
+                    <label for="fullname">الاسم بالكامل</label>
+                    <input type="text"  name="fullname" placeholder="الاسم بالكامل" [(ngModel)]="student.fullname" #fullname="ngModel"  id="fullname" class="form-control" required minlength="7">
+                    <div class="alert alert-danger" *ngIf="fullname.touched && fullname.invalid">
+                        <div>ادخل الاسم الثلاثى الصحيح</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="phonenumber">رقم الهاتف</label>
+                    <input type="text"  name="phonenumber" placeholder="رقم الهاتف" [(ngModel)]="student.phoneNumber" #phonenumber="ngModel"  id="phonenumber" class="form-control" required minlength="11" maxlength="11">
+                    <div class="alert alert-danger" *ngIf="phonenumber.touched && phonenumber.invalid">
+                        <div>ادخل رقم الهاتف الصحيح</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">البريد الالكترونى</label>
+                    <input type="text" class="mail"  name="email" placeholder="البريد الالكترونى" [(ngModel)]="student.email" #email="ngModel"  id="email" class="form-control" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" maxlength="50">
+                    <div class="alert alert-danger" *ngIf="email.touched && email.invalid">
+                        <div>ادخل بريد الكترونى صحيح</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">السنة الدراسية</label>
+                        <select id="year" class="form-control"  name="year" #year="ngModel" (ngModelChange)="onChangeSchoolageYear($event)" [(ngModel)]="selectedYear" required >
+                            <option *ngFor="let scholagesYear of scholagesYears" [value]="scholagesYear.id" >{{scholagesYear.name}}</option >
+                        </select>
+                        <div class="alert alert-danger" *ngIf="year.touched && year.invalid">
+                            <div>اختر السنة الدراسية</div>
+                        </div>
+                </div>
+                <div class="form-group">
+                    <label for="password">كلمة المرور</label>
+                    <input type="password"  name="password" placeholder="كلمة المرور" [(ngModel)]="student.password" #password="ngModel"  id="password" class="form-control" required minlength="6">
+                    <div class="alert alert-danger" *ngIf="password.touched && password.invalid">
+                        <div>ادخل كلمة المرور اكبر من ست حروف</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">تاكيد كلمة المرور</label>
+                    <input type="password"  name="confirmPassword" placeholder="تاكيد كلمة المرور" ngModel #confirmPassword="ngModel" id="confirmPassword" class="form-control" required minlength="6">
+                    <div class="alert alert-danger" *ngIf="password.value !== confirmPassword.value && password.touched && confirmPassword.touched">
+                        كلمات المرور غير متساوية
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" style="display:inline;" class="ml-1" [(ngModel)]="check" name="checked" ngModel #checked="ngModel" id="checked" >
+                    <label style="display:inline">اوافق على جميع الشروط و الاحكام، وسالتزم بجميع سياسات منصة <strong>دروس اكاديمى</strong></label>
+                </div>
+                <div class="form-group">
+                    <button class="btn button signUp text-white" (click)="onSignup()" [disabled]="form.invalid||!check">تسجيل</button>
+                </div>
+                <div class="form-group">
+                    <h2>هل لديك حساب بالفعل؟</h2>
+                    <button class="btn btn-primary button login" routerLink="/StudentLogin">الذهاب الى تسجيل الدخول</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

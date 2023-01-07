@@ -1,0 +1,67 @@
+ <!-- <nav class="navbar navbar-expand-lg navbar-light" style="padding: 15px;">
+    <div class="container row">
+      <div class="navbar-brand col-lg-3">
+
+        <div class="row">
+            <div class="col-11">
+                <a class="navbar-brand" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+                    <app-logo></app-logo>
+                </a>
+            </div>
+            <div class="col-1 span">
+                <button class="navbar-toggler" type="button" (click)="toggleNavbar()" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+      </div>
+
+      <div class="col-2"></div>
+
+      <div class="collapse navbar-collapse row col-5" id="wrapper" [class.show]="isOpen">
+    
+          <ul class="navbar-nav ml-auto my-2 my-lg-0">
+              <li class="nav-item">
+                  <a class="nav-link" routerLink="/teachers" routerLinkActive="active" >المعلمين</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" routerLink="/sellers" routerLinkActive="active" >الموزعين</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" routerLink="/features" routerLinkActive="active" >المميزات</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" routerLink="/aboutSite" routerLinkActive="active" >عن الموقع</a>
+              </li>
+          </ul>
+      </div>
+     </div>
+  </nav> -->
+
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+        <a class="navbar-brand">
+            <app-logo></app-logo>
+        </a>
+        <button class="navbar-toggler" (click)="toggleNavbar()" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse ul" id="navbarSupportedContent" [class.show]="isOpen">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 row">
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/teachers" routerLinkActive="active" >المعلمين</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/sellers" routerLinkActive="active" >الموزعين</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/features" routerLinkActive="active" >المميزات</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/aboutSite" routerLinkActive="active" >عن الموقع</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </nav>

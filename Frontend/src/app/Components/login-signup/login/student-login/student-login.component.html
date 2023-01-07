@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="row">
+        <div  class="col-6 col-md-4 mt-2">
+            <app-logo></app-logo>
+        </div>
+        <div class="col-1 col-md-5 col-lg-6 hide"  ></div>
+        <div class="col-6 col-md-3 col-lg-2 mt-4">
+            <button class="btn back" routerLink="/TeacherHome">العودة <i class="fa fa-long-arrow-left"></i></button>
+        </div>
+    </div>
+    <div class="row body">
+        <div class="right col-lg-7">
+            <img src="assets/Wavy_Tech-28_Single-10 .svg" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-5 mb-5">
+            <form class="m-auto" #f="ngForm">
+                <div class="headings">
+                    <h2>تسجيل الدخول كطالب</h2>
+                </div>
+                <div class="form-group">
+                    <label for="phonenumber">رقم الهاتف / البريد الالكترونى</label>
+                    <input type="text"  name="phonenumber" [(ngModel)]="user.userName" #phonenumber="ngModel" placeholder="رقم الهاتف / البريد الالكترونى"  id="phonenumber" class="form-control" required minlength="10">
+                        <div class="alert alert-danger" *ngIf="phonenumber.touched && phonenumber.invalid">
+                            <div>ادخل رقم الهاتف الصحيح</div>
+                        </div>
+                </div>
+                <div class="form-group">
+                    <label for="password">كلمة المرور</label>
+                    <input type="password"  name="password" [(ngModel)]="user.password" #password="ngModel"  placeholder="كلمة المرور"  id="password" class="form-control" required minlength="6">
+                        <div class="alert alert-danger" *ngIf="password.touched && password.invalid">
+                            <div>ادخل كلمة المرور الصحيحة</div>
+                        </div>
+                </div>
+                <div class="form-group">
+                    <button class="btn button signUp" (click)="login()" [disabled]="f.invalid">تسجيل الدخول</button>
+                </div>
+                <div class="alert alert-danger" *ngIf="failed" >{{output.message}}</div>
+                <div class="form-group">
+                    <h2>ليس لديك حساب؟</h2>
+                    <button class="btn btn-primary button login" routerLink="/StudentSignup">تسجيل حساب جديد</button>
+                </div>
+            </form>
+        </div>
+</div>

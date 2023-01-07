@@ -1,0 +1,53 @@
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-12 col-lg-8">
+        <div class="headings">
+            <h2 class="text-center mt-4"> انشاء امتحان </h2>
+        </div>
+        <form class="bg-dark">
+            
+            <div class="form-group">
+                <label for="examname">عنوان الامتحان</label>
+                <input type="text"  name="examname" placeholder="عنوان الامتحان" [(ngModel)]="exam.name" #examname="ngModel"  id="examname" class="form-control" required minlength="7">
+                <div class="alert alert-danger" *ngIf=" examname.touched && examname.invalid">
+                    <div>ادخل عنوان صحيح لالامتحان</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="examtime">وقت الامتحان بالدقائق</label>
+                <input type="text"  name="examtime" placeholder="وقت الامتحان بالدقائق" [(ngModel)]="exam.time" #examtime="ngModel"  id="examtime" class="form-control" required>
+                <div class="alert alert-danger" *ngIf=" examtime.touched && examtime.invalid">
+                    <div>ادخل وقت الامتحان بالدقائق</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2"></div>
+
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-lg-3 col-md-1"></div>
+                    <div class="col-lg-6 col-md-10">
+                        <button class="btn btn-success submit"(click)="addExam()">اضافة الامتحان للمحاضرة</button>
+                    </div>
+                    <div class="col-lg-3 col-md-1"></div>
+                </div>
+            </div>
+            
+        </form>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+<!--  -->
+<section>
+    <div class="container">
+        <div class="wrapp2">
+        <div class=" likeHeader2  d-flex align-items-center justify-content-center" >
+            <h2 href="#" class="balgha h-100 d-flex align-items-center justify-content-center px-5 text-white text-decoration-none"> اختبارات المحاضرة</h2>
+        </div>
+        <div class="my-5 mx-2 py-3 d-flex justify-content-around row">
+            <a class="btn bg-dark text-white .col-8 .col-md-6 .col-lg-3 my-3" *ngFor="let exam of exams" (click)="goToExam(exam.id)" ><i class="fa fa-question-circle m-auto" style="display: block;text-align: center; "></i>{{exam.name}}</a>
+        </div>
+        </div>
+    </div>
+</section>

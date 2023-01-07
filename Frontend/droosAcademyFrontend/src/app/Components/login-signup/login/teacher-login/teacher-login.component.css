@@ -1,0 +1,105 @@
+*{
+    direction: rtl;
+    text-align: right;
+    font-size: 1.3rem;
+}
+.back{
+    background-color: #F18C8E;
+    border-radius: 2rem 0 0 2rem;
+    color: white;
+    padding-bottom: 0.1rem;
+    padding-top: 0.1rem;
+}
+i{
+    padding-right: 1rem;
+}
+p{
+    padding-right: 0.5rem;
+    color: #F18C8E;
+}
+span{
+    border-radius: 50% 50%;
+    background-color: #F18C8E;
+    height: 2rem;
+    width: 2rem;
+    color: white;
+    font-weight: bold;
+    display: inline-block;
+    padding-top: .2rem;
+    text-align: center;
+}
+.message{
+    margin: 2rem;
+}
+form{
+    background-color: #F18C8E;
+    color: white;
+    padding:1rem;
+    width: 80%;
+    box-shadow: 10px 5px 5px gray;
+    border-radius: 18px;
+}
+input,select{
+    border-radius: 0.65rem;
+}
+.body{
+    margin-top:4rem;
+}
+strong{
+    color: #2E5361;
+}
+.button{
+    width: 80%;
+    text-align: center;
+    border-radius: 0.5rem;
+    height: 3rem;
+}
+.signUp{
+    background-color:#2E5361 ;
+}
+.login{
+    background-color:#3498DB;
+}
+h2{
+    text-align: center;
+    font-size: 2rem;
+    margin: 2rem;
+}
+@media (max-width:986px){
+    .right{
+        display: none;
+    }
+    form button{
+        width: 100%;
+    }
+}
+
+.container{
+    overflow: hidden !important;
+}
+form button {
+    display: block;
+    margin: auto;
+}
+i{
+    font-size: 20px;
+}
+@media (max-width:407px){
+    .col-1{
+        display: none !important;
+    }
+
+}
+@media(max-width:767px){
+    .hide{
+        display: none !important;
+    }
+}
+@media(max-width:445px){
+    *{
+        font-size: 1.1rem;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+}
